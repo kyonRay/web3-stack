@@ -1,68 +1,88 @@
-# web3-stack
+# Web3 技术专家知识库
 
-A curated knowledge repository for Web3 technology, architecture, and development. This repository collects research documents, development experience, EIP interpretations, AI prompts, and more to help developers navigate the Web3 ecosystem.
+> 面向已有区块链基础的工程师，系统成为三个方向的 Web3 专家。
 
-## 📚 Contents
+---
 
-| Directory | Description |
-|-----------|-------------|
-| [web3-fundamentals/](./web3-fundamentals/) | Core Web3 concepts, blockchain basics, and key protocols |
-| [solidity/](./solidity/) | Solidity development experience, best practices, and gas optimization |
-| [eip/](./eip/) | Ethereum Improvement Proposal (EIP/ERC) interpretations and deep dives |
-| [architecture/](./architecture/) | Web3 system architecture, scaling solutions, and design patterns |
-| [ai-prompts/](./ai-prompts/) | Curated AI prompts for Web3 and smart contract development |
+## 三大专家方向
 
-## 🗂️ Article Index
+### 🔗 [链开发专家](./chain-dev/README.md)
 
-### Web3 Fundamentals
-- [Blockchain Basics](./web3-fundamentals/blockchain-basics.md) – Blocks, consensus, and the decentralized network model
-- [Account Model vs UTXO](./web3-fundamentals/account-model-vs-utxo.md) – Comparing Ethereum's account model with Bitcoin's UTXO model
+从以太坊客户端源码到 Layer 2 系统开发，掌握区块链底层架构。
 
-### Solidity
-- [Best Practices & Security Patterns](./solidity/best-practices.md) – Common pitfalls, security patterns, and coding standards
-- [Gas Optimization Techniques](./solidity/gas-optimization.md) – Strategies to reduce gas costs in Solidity contracts
+| 模块 | 主题 |
+|------|------|
+| **Layer 1** | EVM 执行模型、共识实现（Gasper）、P2P 网络、以太坊客户端（Geth/Reth） |
+| **Layer 2** | Optimistic Rollup、ZK Rollup、OP Stack、Arbitrum、模块化区块链、数据可用性 |
+| **应用链** | Substrate（Polkadot）、Cosmos SDK、跨链消息（CCIP/LayerZero） |
 
-### EIP Interpretations
-- [EIP-20 (ERC-20): Fungible Token Standard](./eip/eip-20-erc20.md) – In-depth look at the fungible token interface
-- [EIP-721 (ERC-721): Non-Fungible Token Standard](./eip/eip-721-erc721.md) – Deep dive into the NFT standard and its extensions
-- [EIP-1559: Fee Market Reform](./eip/eip-1559-fee-market.md) – How EIP-1559 changed Ethereum's transaction fee mechanism
+---
 
-### Architecture
-- [Layer 2 Scaling Solutions](./architecture/layer2-scaling.md) – Rollups, state channels, and other L2 approaches
-- [Decentralized Storage](./architecture/decentralized-storage.md) – IPFS, Arweave, and on-chain storage trade-offs
+### 📝 [合约开发专家](./smart-contract-dev/README.md)
 
-### AI Prompts
-- [Smart Contract Audit Prompts](./ai-prompts/smart-contract-audit.md) – Prompts for AI-assisted smart contract auditing
-- [Solidity Code Generation Prompts](./ai-prompts/solidity-code-generation.md) – Prompts for generating and reviewing Solidity code
+精通主流生态智能合约开发，尤其 EVM Solidity 深度精通。
 
-## 🤝 Contributing
+| 生态 | 核心技术栈 |
+|------|-----------|
+| **EVM（重点）** | Solidity 深度精通、Foundry/Hardhat、ERC 标准、安全审计、EVM 原理 |
+| **Solana** | Rust + Anchor、PDA/CPI、SPL Token、Token-2022 |
+| **Move** | Sui Move（对象模型、PTB）、Aptos Move（资源模型、FA 标准） |
 
-Contributions are welcome! Please follow the guidelines below:
+---
 
-1. **Fork** the repository and create your branch from `main`.
-2. **Place** your article in the appropriate topic directory. Create a new directory if your topic does not fit an existing one.
-3. **Use Markdown** (`.md`) for all articles. Follow the existing article format (title, date, brief intro, sections).
-4. **Link** your new article in this `README.md` index.
-5. **Submit a Pull Request** with a short description of what you added.
+### 🖥️ [DApp 开发专家](./dapp-dev/README.md)
 
-### Article Format
+构建生产级去中心化应用，覆盖钱包、合约交互、数据索引全链路。
 
-```markdown
-# Article Title
+| 生态 | 核心技术栈 |
+|------|-----------|
+| **EVM** | Wagmi + Viem + RainbowKit、Next.js、The Graph、Alchemy |
+| **Solana** | Wallet Adapter、@solana/web3.js、Anchor client、Helius |
+| **Move** | Sui dApp Kit、Aptos TS SDK、GraphQL Indexer |
 
-> **Date:** YYYY-MM-DD  
-> **Tags:** tag1, tag2, tag3
+---
 
-## Introduction
-...
+## 辅助模块
 
-## Section 1
-...
+| 目录 | 内容 |
+|------|------|
+| [protocols/](./protocols/README.md) | DeFi、NFT、DAO、预言机、稳定币、ZKP、安全审计 |
+| [ai-workflows/](./ai-workflows/README.md) | AI 辅助合约审计与代码生成 Prompt |
+| [resources/](./resources/README.md) | 区块链基础速查、术语表、学习路线图 |
 
-## References
-- [Source 1](url)
+---
+
+## 快速开始
+
+根据你的目标方向选择入口：
+
+**想做链开发** → [chain-dev/README.md](./chain-dev/README.md)
+
+**想精通合约** → [smart-contract-dev/evm/solidity/README.md](./smart-contract-dev/evm/solidity/README.md)（EVM 首选）
+
+**想做 DApp** → [dapp-dev/evm/README.md](./dapp-dev/evm/README.md)（EVM 首选）
+
+**规划完整路径** → [resources/roadmap.md](./resources/roadmap.md)
+
+---
+
+## 目录结构
+
 ```
-
-## 📄 License
-
-This repository is licensed under the [Apache License 2.0](./LICENSE).
+web3-stack/
+├── chain-dev/            # 链开发专家
+│   ├── layer1/           #   执行层、共识层、客户端、P2P
+│   └── layer2/           #   Rollup、OP Stack、ZK、模块化、DA、跨链
+├── smart-contract-dev/   # 合约开发专家
+│   ├── evm/              #   Solidity（重点）、框架、标准、审计
+│   │   └── solidity/     #     语言深入、最佳实践、安全、高级主题
+│   ├── solana/           #   Rust、Anchor、SPL Token、PDA/CPI
+│   └── move/             #   Move 语言、Sui、Aptos
+├── dapp-dev/             # DApp 开发专家
+│   ├── evm/              #   Wagmi、Viem、The Graph、部署
+│   ├── solana/           #   Wallet Adapter、Anchor client、Helius
+│   └── move/             #   Sui dApp Kit、Aptos SDK
+├── protocols/            # 协议与用例速查
+├── ai-workflows/         # AI 辅助工作流
+└── resources/            # 通用资源
+```
